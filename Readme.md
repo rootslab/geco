@@ -78,6 +78,24 @@ $ npm run bench
  $ node bench/file-name.js
 ```
 
+> __output example and running time__:
+
+```bash
+- generate all boards of 5 cards from a deck of 52, without repetition/replacement
+
+- the 52-card deck deck is:
+  A♠ K♠ Q♠ J♠ T♠ 9♠ 8♠ 7♠ 6♠ 5♠ 4♠ 3♠ 2♠ 
+  A♣ K♣ Q♣ J♣ T♣ 9♣ 8♣ 7♣ 6♣ 5♣ 4♣ 3♣ 2♣ 
+  A♦ K♦ Q♦ J♦ T♦ 9♦ 8♦ 7♦ 6♦ 5♦ 4♦ 3♦ 2♦ 
+  A♥ K♥ Q♥ J♥ T♥ 9♥ 8♥ 7♥ 6♥ 5♥ 4♥ 3♥ 2♥
+
+- generating 5-combinations..
+
+- total: 2598960 combinations
+- rate:  594727 comb/sec
+- time:  4.37 secs
+```
+
 ### Methods
 
 > Arguments between [ ] are optional.
