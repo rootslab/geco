@@ -35,8 +35,8 @@ for ( comb of iter1 ) {
 log();
 log( `- cards: ${ cards.slice( 0, n1 ) }` );
 log( `\n- (n1,k1): ${ n1 },${ k1 }` );
-log( `  comb: ${j1}` );
+log( `  comb: ${ j1 }` );
 log( `\n- (n2,k2): ${ n2 },${ k2 }` );
-log( `  comb: ${j2 / j1}` );
-log( `\n- tot comb: ${j2}` );
+log( `  comb: ${ j2 / j1 }` );
+log( `\n- total comb (${ j2 / j1 }*${ j1 }): ${j2}` );
 log();
