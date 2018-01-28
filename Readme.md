@@ -16,7 +16,7 @@
 
 [![NPM GRAPH](https://nodei.co/npm/geco.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/geco/)
 
-> __Geco__, a __CAT__ (Constant Amortized Time) __generator*__ for __k-combinations__ chosen from a given set S of __n__ elements.
+> __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for __k-combinations__ chosen from a given set S of __n__ elements.
 
 ### Table of Contents
 

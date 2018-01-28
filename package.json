@@ -1,7 +1,7 @@
 {
   "name": "geco",
-  "version": "0.1.2",
-  "description": "Geco, a CAT generator for k-combinations, chosen from a given set S of n elements.",
+  "version": "0.1.3",
+  "description": "Geco, a CAT recursive generator* for k-combinations, chosen from a given set S of n elements.",
   "homepage": "https://github.com/rootslab/geco",
   "private": false,
   "repository": {
