@@ -24,7 +24,7 @@
 - __[Run Tests](#run-tests)__
 - __[Run Benchmarks](#run-benchmarks)__
 - __[Methods](#methods)__
-    - __[gen](#geco.gen)__
+    - __[gen](#gecogen)__
 - __[Events](#events)__
 - __[Examples](#examples)__
 - __[MIT License](#mit-license)__
