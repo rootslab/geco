@@ -80,12 +80,16 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[do](#gecodo)__       | `...` |
+| __[gen](#gecogen)__       | `...` |
 
 
 #### Geco.gen
 > ##### .
 ```javascript
+/*
+ *
+ */
+'gen' : function ( Number n, Number k, Array set [, Boolean concat ] )
 ```
 
 ### Examples

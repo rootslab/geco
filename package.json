@@ -1,6 +1,6 @@
 {
   "name": "geco"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "description": "Geco, a CAT generator for k-combinations from a given set S of n elements."
   , "homepage": "https://github.com/rootslab/geco"
   , "private": false
