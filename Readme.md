@@ -29,8 +29,8 @@
 - __[Examples](#examples)__
   - __[Simple Example](#examples)__
   - __[Cards Example](#examples)__
-  - __[Cartesian Product](examples)__
-  - __[52-Card Deck Example](examples)__
+  - __[Cartesian Product](#examples)__
+  - __[52-Card Deck Example](#examples)__
 - __[MIT License](#mit-license)__
 
 ------------------------------------------------------------------------------
