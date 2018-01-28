@@ -27,6 +27,7 @@ for ( comb of iter1 ) {
         if ( concat ) result = Buffer.concat( result );
         log( ` (${++j2}): ${comb} ${scomb} -> ${result}` );
     }
+    log();
     iter2 = Geco.gen( n2, k2, cards, concat );
     ++j1;
 }
