@@ -20,8 +20,6 @@ let log = console.log
     ;
 
 log();
-    
-
 
 for ( comb of iter1 ) {
     for ( scomb of iter2 ) {
