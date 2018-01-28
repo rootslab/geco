@@ -1,6 +1,6 @@
 /*
  * get all combinations of k cards chosen from n values,
- * without replacement/reptitiorn 
+ * without replacement/reptition 
  */
 
 let log = console.log
