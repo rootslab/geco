@@ -6,7 +6,7 @@
 let log = console.log
     , Geco = require( '../' )
     , cards = 'AKQJT98765432'.split( '' )
-    , concat = !true
+    , concat = !!true
     , j = 0
     , n = 5
     , k = 3

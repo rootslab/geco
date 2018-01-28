@@ -88,7 +88,8 @@ $ npm run bench
 ```javascript
 /*
  * get a Generator to iterate on all combinations of k elements,
- * chosen from the first n items of the given set. 
+ * chosen from the first n items of the given set. Optionally, it
+ * is possible to concat results and get a merged Buffer.
  */
 'gen' : function *( Number n, Number k, Array set [, Boolean concat ] ) : Generator
 ```
