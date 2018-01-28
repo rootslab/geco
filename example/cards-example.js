@@ -1,3 +1,8 @@
+/*
+ * get all combinations of k cards chosen from n values,
+ * without replacement/reptitiorn 
+ */
+
 let log = console.log
     , Geco = require( '../' )
     , cards = 'AKQJT98765432'.split( '' )

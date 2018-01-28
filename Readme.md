@@ -16,7 +16,7 @@
 
 [![NPM GRAPH](https://nodei.co/npm/geco.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/geco/)
 
-> __Geco__, a CAT generator for __k-combinations__ from a given set S of __n__ elements.
+> __Geco__, a __CAT__ (Constant Amortized Time) generator* for __k-combinations__ chosen from a given set S of __n__ elements.
 
 ### Table of Contents
 
@@ -80,24 +80,22 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[gen](#gecogen)__       | `...` |
+| __[gen](#gecogen)__     | `produce a combination of k elements from a set, without replacement`|
 
 
 #### Geco.gen
 > ##### .
 ```javascript
 /*
- *
+ * get a Generator to iterate on all combinations of k elements,
+ * chosen from the first n items of the given set. 
  */
-'gen' : function ( Number n, Number k, Array set [, Boolean concat ] )
+'gen' : function *( Number n, Number k, Array set [, Boolean concat ] ) : Generator
 ```
 
 ### Examples
 
-#### ..:
- 
- > - __[](example/geco-example.js)__
- > - ...
+ > - __[Cards Example](example/geco-example.js)__
 
 > See __[examples](example/)__.
 
