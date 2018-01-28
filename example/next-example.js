@@ -16,12 +16,12 @@ let log = console.log
 log();
 
 while ( true ) {
-	comb = iter.next();
-	if ( comb.done ) {
-		log( ' done!');
-		break;
-	}
-	log( ` (${++j}): ${comb.value}` );
+    comb = iter.next();
+    if ( comb.done ) {
+        log( ' done!');
+        break;
+    }
+    log( ` (${++j}): ${comb.value}` );
 }
 
 log();
