@@ -102,7 +102,7 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[gen](#gecogen)__     | `produce a combination of k elements from a set, without replacement`|
+| __[gen](#gecogen)__     | `get a Generator to produce combinations of k elements from a set, without replacement`|
 
 
 #### Geco.gen
