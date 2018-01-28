@@ -97,7 +97,7 @@ $ npm run bench
 
 ### Examples
 
- > - __[Simple Example()](example/next-example.js)__
+ > - __[Simple Example](example/next-example.js)__
  > - __[Cards Example](example/cards-example.js)__
  > - __[Cartesian Product](example/cartesian-product-example.js)__
 
