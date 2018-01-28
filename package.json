@@ -1,41 +1,42 @@
 {
-  "name": "geco"
-  , "version": "0.0.3"
-  , "description": "Geco, a CAT generator for k-combinations from a given set S of n elements."
-  , "homepage": "https://github.com/rootslab/geco"
-  , "private": false
-  , "repository": {
-    "type": "git"
-    , "url": "git://github.com/rootslab/geco.git"
-  }
-  , "keywords": [
-    "geco"
-    , "combinations"
-    , "k-combinations"
-    , "CAT"
-    , "combinatorics"
-    , "generators"
-  ]
-  , "author": {
-    "name": "Guglielmo Ferri"
-    , "email": "44gatti@gmail.com"
-  }
-  , "dependencies": {
-      "bolgia" : ">=2.8.2"
+  "name": "geco",
+  "version": "0.0.4",
+  "description": "Geco, a CAT generator for k-combinations from a given set S of n elements.",
+  "homepage": "https://github.com/rootslab/geco",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rootslab/geco.git"
+  },
+  "keywords": [
+    "geco",
+    "combinations",
+    "k-combinations",
+    "CAT",
+    "combinatorics",
+    "generators"
+  ],
+  "author": {
+    "name": "Guglielmo Ferri",
+    "email": "44gatti@gmail.com"
+  },
+  "dependencies": {
+    "bolgia": ">=2.8.2"
   },
   "devDependencies": {
-     "dado" : ">=0.2.0"
-  }
-  , "main": "index"
-  , "engines": {
+    "dado": ">=0.2.0"
+  },
+  "main": "index",
+  "engines": {
     "node": ">=6.x.x"
-  }
-  , "scripts": {
-    "test": "node test/run.js"
-  }
-  , "license": "MIT"
-  , "readmeFilename": "Readme.md"
-  , "bugs": {
+  },
+  "scripts": {
+    "test": "node test/run.js",
+    "bench": "bash bench/run.sh"
+  },
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "bugs": {
     "url": "https://github.com/rootslab/geco/issues"
   }
 }
