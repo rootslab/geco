@@ -100,6 +100,7 @@ $ npm run bench
  > - __[Simple Example](example/next-example.js)__
  > - __[Cards Example](example/cards-example.js)__
  > - __[Cartesian Product](example/cartesian-product-example.js)__
+ > - __[52-Card Deck Example](example/deck-example.js)__
 
 > See __[examples](example/)__.
 
