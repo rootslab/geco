@@ -84,7 +84,7 @@ $ npm run bench
 
 
 #### Geco.gen
-> ##### .
+> ##### get a k-combination without replacement
 ```javascript
 /*
  * get a Generator to iterate on all combinations of k elements,
@@ -97,7 +97,7 @@ $ npm run bench
 
 ### Examples
 
- > - __[Cards Example](example/geco-example.js)__
+ > - __[Cards Example](example/cards-example.js)__
 
 > See __[examples](example/)__.
 
