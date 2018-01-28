@@ -98,6 +98,7 @@ $ npm run bench
 ### Examples
 
  > - __[Cards Example](example/cards-example.js)__
+ > - __[Cartesian Product](example/cartesian-product-example.js)__
 
 > See __[examples](example/)__.
 
