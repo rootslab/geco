@@ -20,9 +20,7 @@
     "name": "Guglielmo Ferri",
     "email": "44gatti@gmail.com"
   },
-  "dependencies": {
-    "bolgia": ">=2.8.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "dado": ">=0.2.0"
   },
