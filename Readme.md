@@ -133,13 +133,13 @@ $ npm run bench
 ```
 
 #### Geco.bgen
-> ##### get a k-combination without replacement, using a bitmap
+> ##### get a k-combination without replacement (using a bitmap)
 ```javascript
 /*
  * Like #gen, but it uses a bitmap for generating combinations,
  * then, for a set of n elements, it uses only n bits in memory.
  */
-'gen' : function *( Number n, Number k, Array set ) : Generator
+'bgen' : function *( Number n, Number k, Array set ) : Generator
 ```
 
 ### Examples
