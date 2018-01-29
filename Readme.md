@@ -20,6 +20,9 @@
 
 > It is __extremely memory efficient__, it generates all the k-combinations in a set of __n elements__, using a single sequence of __n bits__, __only 1 bit per element__.
 
+> __NOTE__: It generates combinations in __[Colexicographic Order](https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order)__
+
+
 ### Table of Contents
 
 - __[Install](#install)__

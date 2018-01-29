@@ -17,7 +17,7 @@ log();
 while ( true ) {
     comb = iter.next();
     if ( comb.done ) {
-        log( ' done!');
+        log( ' done!' );
         break;
     }
     log( ` (${++j}): ${comb.value}` );
