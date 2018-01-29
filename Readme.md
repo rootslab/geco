@@ -18,9 +18,9 @@
 
 > __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for __k-combinations__ chosen from a given set S of __n__ elements.
 
-> It is __extremely memory efficient__, it generates all the k-combinations in a set of __n elements__, using a single sequence of __n bits__, __only 1 bit per element__.
+> It is __extremely__ memory efficient, it generates all the k-combinations in a set of __n elements__, using a __single sequence of n bits__, only __1 bit__ per element.
 
-> __NOTE__: It generates combinations in __[Colexicographic Order](https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order)__
+> __NOTE__: It generates combinations in __[Colexicographic Order](https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order)__.
 
 
 ### Table of Contents
