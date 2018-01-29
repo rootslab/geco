@@ -83,7 +83,7 @@ $ npm run bench
 ```bash
 - generate all boards of 5 cards from a deck of 52, without repetition/replacement
 
-- the 52-card deck deck is:
+- the 52-card deck is:
   A♠ K♠ Q♠ J♠ T♠ 9♠ 8♠ 7♠ 6♠ 5♠ 4♠ 3♠ 2♠ 
   A♣ K♣ Q♣ J♣ T♣ 9♣ 8♣ 7♣ 6♣ 5♣ 4♣ 3♣ 2♣ 
   A♦ K♦ Q♦ J♦ T♦ 9♦ 8♦ 7♦ 6♦ 5♦ 4♦ 3♦ 2♦ 
