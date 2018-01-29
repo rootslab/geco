@@ -68,7 +68,7 @@ var Geco  = require( 'geco' );
 ### Run Benchmarks
 
 ```bash
-$ cd auntie/
+$ cd geco/
 $ npm run bench
 ```
 
