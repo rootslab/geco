@@ -1,7 +1,7 @@
 /*
- * list all possible combinations/boards of 5 cards, chosen from a
- * deck of 52 cards (13 different card values, 4 different suits),
- * without repetition/replacement.
+ * benchmark for listing all possible combinations/boards of 5 cards,
+ * chosen from a deck of 52 cards (13 different card values and 4 
+ * different suits), without repetition/replacement.
  */
 
 let log = console.log
@@ -14,7 +14,7 @@ let log = console.log
     , Geco = require( '../' )
     // concat combination?
     , concat = !!false
-    // get k cards, 3 for simulate all possible flops, 5 for boards ..
+    // get k cards
     , cards = 5
     // get the iterable generator
     , iter = Geco.gen( deck.length, cards, deck, concat )
@@ -36,9 +36,20 @@ let log = console.log
     , etime = -1
     ;
 
-for ( board of iter )
-    log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 5 ) } %]` );
+log( '- generate all boards of 5 cards from a deck of 52, without repetition/replacement' );
+log( `\n- the 52-card deck deck is:\n  ${ spades }\n  ${clubs}\n  ${diamonds}\n  ${hearts}` );
+
+log( `\n- generating all ${ cards }-combinations (${ tot })..` );
+
+for ( board of iter ) {
+    ++cnt;
+    if ( ( ( 100 * cnt / tot ) ) % 10 === 0 ) 
+        log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 5 ) } %] ${ ( ( Date.now() - stime ) / 1000 ).toFixed( 2 ) } secs` );
+}
 
 etime = ( ( Date.now() - stime ) / 1000 ).toFixed( 2 );
 
-log( `\n- time elapsed: ${ etime } secs` );
+log();
+log( `- total: ${ cnt } combinations` );
+log( `- rate:  ${ ( cnt / etime ) >>> 0 } comb/sec` );
+log( `- time:  ${ etime } secs` );

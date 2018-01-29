@@ -1,5 +1,5 @@
 /*
- * benchmark for listing all possible combinations/boards of 5 cards,
+ * benchmark for listing all possible combinations/boards of 7 cards,
  * chosen from a deck of 52 cards (13 different card values and 4 
  * different suits), without repetition/replacement.
  */
@@ -15,7 +15,7 @@ let log = console.log
     // concat combination?
     , concat = !!false
     // get k cards
-    , cards = 5
+    , cards = 7
     // get the iterable generator
     , iter = Geco.gen( deck.length, cards, deck, concat )
     , cnt = 0
@@ -39,12 +39,13 @@ let log = console.log
 log( '- generate all boards of 5 cards from a deck of 52, without repetition/replacement' );
 log( `\n- the 52-card deck deck is:\n  ${ spades }\n  ${clubs}\n  ${diamonds}\n  ${hearts}` );
 
-log( `\n- generating ${ cards }-combinations..` );
+log( `\n- generating all ${ cards }-combinations (${ tot })..` );
 
-for ( board of iter ) 
+for ( board of iter ) {
     ++cnt;
-    // log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 5 ) } %]` );
-
+    if ( ( ( 100 * cnt / tot ) ) % 5 === 0 ) 
+        log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 5 ) } %] ${ ( ( Date.now() - stime ) / 1000 ).toFixed( 2 ) } secs` );
+}
 
 etime = ( ( Date.now() - stime ) / 1000 ).toFixed( 2 );
 
