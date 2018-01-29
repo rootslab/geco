@@ -1,6 +1,6 @@
 {
   "name": "geco",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Geco, a (Constant Amortized Time) recursive generator* for k-combinations, chosen from a given set S of n elements.",
   "homepage": "https://github.com/rootslab/geco",
   "private": false,
@@ -12,6 +12,8 @@
     "geco",
     "combinations",
     "k-combinations",
+    "colex",
+    "colexicographic order",
     "CAT",
     "combinatorics",
     "generators"
