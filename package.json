@@ -1,6 +1,6 @@
 {
   "name": "geco",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Geco, a (Constant Amortized Time) recursive generator* for k-combinations, chosen from a given set S of n elements.",
   "homepage": "https://github.com/rootslab/geco",
   "private": false,
@@ -21,10 +21,10 @@
     "email": "44gatti@gmail.com"
   },
   "dependencies": {
+    "toni": ">=0.6.2"
   },
   "devDependencies": {
     "dado": ">=0.2.0"
-    , "toni": ">=0.6.2"
   },
   "main": "index",
   "engines": {
