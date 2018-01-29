@@ -18,6 +18,8 @@
 
 > __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for __k-combinations__ chosen from a given set S of __n__ elements.
 
+> It is __extremely memory efficient__, it generates all the k-combinations in a set of __n elements__, using a single sequence of __n bits__, __only 1 bit per element__.
+
 ### Table of Contents
 
 - __[Install](#install)__
@@ -25,6 +27,7 @@
 - __[Run Benchmarks](#run-benchmarks)__
 - __[Methods](#methods)__
     - __[gen](#gecogen)__
+    - __[bgen](#gecobgen)__
 - __[Events](#events)__
 - __[Examples](#examples)__
   - __[Simple Example](#examples)__
@@ -91,9 +94,20 @@ $ npm run bench
 
 - generating 5-combinations..
 
+....
+
 - total: 2598960 combinations
-- rate:  594727 comb/sec
-- time:  4.37 secs
+- rate:  621760 comb/sec
+- time:  4.18 secs
+
+- generating all 7-combinations (133784560)..
+
+....
+
+- total: 133784580 combinations
+- rate:  580687 comb/sec
+- time:  230.39 secs
+
 ```
 
 ### Methods
@@ -102,7 +116,8 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[gen](#gecogen)__     | `get a Generator to produce combinations of k elements from a set, without replacement`|
+| __[gen](#gecogen)__     | `get a Generator to produce combinations of k elements from a set of n, without replacement`|
+| __[bgen](#gecobgen)__   | `It's the same as #gen, but it uses a bitmap for generating combinations.` |
 
 
 #### Geco.gen
@@ -110,11 +125,21 @@ $ npm run bench
 ```javascript
 /*
  * get a Generator to iterate on all combinations of k elements,
- * chosen from the first n items of the given set. Optionally,
- * instead of getting a list of distinct elements, it is possible
- * to concat them and get a merged Buffer on every iteration.
+ * chosen from the first n items of the given set.
+ *
+ * NOTE: it uses n bytes in memory to generate all combinations.
  */
-'gen' : function *( Number n, Number k, Array set [, Boolean concat ] ) : Generator
+'gen' : function *( Number n, Number k, Array set ) : Generator
+```
+
+#### Geco.bgen
+> ##### get a k-combination without replacement, using a bitmap
+```javascript
+/*
+ * Like #gen, but it uses a bitmap for generating combinations,
+ * then, for a set of n elements, it uses only n bits in memory.
+ */
+'gen' : function *( Number n, Number k, Array set ) : Generator
 ```
 
 ### Examples

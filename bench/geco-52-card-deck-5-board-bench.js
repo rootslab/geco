@@ -5,19 +5,20 @@
  */
 
 let log = console.log
+    , bfrom = Buffer.from
     , spades = 'A♠ K♠ Q♠ J♠ T♠ 9♠ 8♠ 7♠ 6♠ 5♠ 4♠ 3♠ 2♠ '
     , clubs = 'A♣ K♣ Q♣ J♣ T♣ 9♣ 8♣ 7♣ 6♣ 5♣ 4♣ 3♣ 2♣ '
     , diamonds = 'A♦ K♦ Q♦ J♦ T♦ 9♦ 8♦ 7♦ 6♦ 5♦ 4♦ 3♦ 2♦ '
     , hearts = 'A♥ K♥ Q♥ J♥ T♥ 9♥ 8♥ 7♥ 6♥ 5♥ 4♥ 3♥ 2♥'
     , deck = ( spades + clubs + diamonds + hearts ).split( ' ' )
+    // buffer variant
+    , bdeck = deck.map( x => bfrom( x ) )
     , dlen = deck.length
     , Geco = require( '../' )
-    // concat combination?
-    , concat = !!false
     // get k cards
     , cards = 5
     // get the iterable generator
-    , iter = Geco.gen( deck.length, cards, deck, concat )
+    , iter = Geco.gen( deck.length, cards, deck )
     , cnt = 0
     , board = null
     // get total number of combinations
@@ -32,14 +33,14 @@ let log = console.log
         }
         return ( f1 / f2 );
     } ) ()
+    , etime = 0
     , stime = Date.now()
-    , etime = -1
     ;
 
 log( '- generate all boards of 5 cards from a deck of 52, without repetition/replacement' );
 log( `\n- the 52-card deck is:\n  ${ spades }\n  ${clubs}\n  ${diamonds}\n  ${hearts}` );
 
-log( `\n- generating all ${ cards }-combinations (${ tot })..` );
+log( `\n- generating all ${ cards }-combinations (${ tot })..\n` );
 
 for ( board of iter ) {
     ++cnt;

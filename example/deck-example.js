@@ -12,12 +12,10 @@ let log = console.log
     , deck = ( spades + clubs + diamonds + hearts ).split( ' ' )
     , dlen = deck.length
     , Geco = require( '../' )
-    // concat combination?
-    , concat = !!false
     // get k cards, 3 for simulate all possible flops, 5 for boards ..
     , cards = 5
     // get the iterable generator
-    , iter = Geco.gen( deck.length, cards, deck, concat )
+    , iter = Geco.gen( deck.length, cards, deck )
     , cnt = 0
     , board = null
     // get total number of combinations
