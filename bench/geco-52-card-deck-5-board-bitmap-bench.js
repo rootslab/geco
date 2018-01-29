@@ -37,7 +37,7 @@ let log = console.log
     , stime = Date.now()
     ;
 
-log( '- generate all boards of 5 cards from a deck of 52, without repetition/replacement' );
+log( '- generate all boards of 5 cards from a deck of 52, without repetition/replacement, using a bitmap' );
 log( `\n- the 52-card deck is:\n  ${ spades }\n  ${clubs}\n  ${diamonds}\n  ${hearts}` );
 
 log( `\n- generating all ${ cards }-combinations (${ tot })..\n` );
