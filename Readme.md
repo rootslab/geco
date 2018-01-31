@@ -121,8 +121,8 @@ $ npm run bench
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
-| __[getbuff](#gecogetbuff)__ | `..` |
-| __[getbmap](#gecogetbmap)__ | `..` |
+| __[getbuff](#gecogetbuff)__ | `get a generic k-combination of n elements represented as a buffer` |
+| __[getbmap](#gecogetbmap)__ | `get a generic k-combination of n elements represented as a bitmap` |
 
 
 #### Geco.gen
@@ -144,15 +144,19 @@ $ npm run bench
 ```javascript
 /*
  * the iterator's value is a Buffer with k bytes set to 1.
+ * Every 1 (a byte) represents a chosen element for the current combination.
  */
 'getbuff' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
 #### Geco.getbmap
-> ##### get a k-combination of n elements, as a bitmap
+> ##### get a k-combination of n elements, as a bitmap  ([Toni](https://github.com/rootslab/toni))
 ```javascript
 /*
  * the iterator's value is a bitmap with k bits set to 1.
+ * Every 1 (a bit) represents a chosen element for the current combination.
+ *
+ * NOTE: to check if the element at index i has been chosen use bitmap.chk( i ).
  */
 'getbmap' : function ( Number n, Number k ) : GeneratorFunction
 ```
