@@ -6,11 +6,10 @@
 let log = console.log
     , Geco = require( '../' )
     , cards = 'AKQJT98765432'.split( '' )
-    , concat = !!true
     , j = 0
     , n = 5
     , k = 4
-    , iter = Geco.gen( n, k, cards, concat )
+    , iter = Geco.gen( n, k, cards )
     ;
 
 log();

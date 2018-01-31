@@ -30,7 +30,8 @@
 - __[Run Benchmarks](#run-benchmarks)__
 - __[Methods](#methods)__
     - __[gen](#gecogen)__
-    - __[bgen](#gecobgen)__
+    - __[getbuff](#gecogetbuff)__
+    - __[getbmap](#gecogetbmap)__
 - __[Events](#events)__
 - __[Examples](#examples)__
   - __[Simple Example](#examples)__
@@ -119,30 +120,41 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[gen](#gecogen)__     | `get a Generator to produce combinations of k elements from a set of n, without replacement`|
-| __[bgen](#gecobgen)__   | `It's the same as #gen, but it uses a bitmap for generating combinations.` |
+| __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
+| __[getbuff](#gecogetbuff)__ | `..` |
+| __[getbmap](#gecogetbmap)__ | `..` |
 
 
 #### Geco.gen
-> ##### get a k-combination without replacement
+> ##### get a k-combination of a given set, without replacement
 ```javascript
 /*
- * get a Generator to iterate on all combinations of k elements,
- * chosen from the first n items of the given set.
+ * get a generator for iterating on all combinations of k elements,
+ * chosen from the first n items of the given set. Optionally, it
+ * may uses also a bitmap, for generating combinations.
  *
- * NOTE: it uses n bytes in memory to generate all combinations.
+ * NOTE: it consumes only n bytes in memory to generate all combinations,
+ * with bitmap, it uses only n bits.
  */
-'gen' : function *( Number n, Number k, Array set ) : Generator
+'gen' : function *( Number n, Number k, Array set [, Boolean bitmap ] ) : GeneratorFunction
 ```
 
-#### Geco.bgen
-> ##### get a k-combination without replacement (using a bitmap)
+#### Geco.getbuff
+> ##### get a k-combination of n elements, as a buffer
 ```javascript
 /*
- * Like #gen, but it uses a bitmap for generating combinations,
- * then, for a set of n elements, it uses only n bits in memory.
+ * the iterator's value is a Buffer with k bytes set to 1.
  */
-'bgen' : function *( Number n, Number k, Array set ) : Generator
+'getbuff' : function ( Number n, Number k ) : GeneratorFunction
+```
+
+#### Geco.getbmap
+> ##### get a k-combination of n elements, as a bitmap
+```javascript
+/*
+ * the iterator's value is a bitmap with k bits set to 1.
+ */
+'getbmap' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
 ### Examples

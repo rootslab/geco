@@ -45,7 +45,7 @@ log( `\n- generating all ${ cards }-combinations (${ tot })..\n` );
 for ( board of iter ) {
     ++cnt;
     if ( ( ( 100 * cnt / tot ) ) % 10 === 0 ) 
-        log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 5 ) } %] ${ ( ( Date.now() - stime ) / 1000 ).toFixed( 2 ) } secs` );
+        log( ` (${ ++cnt }): ${board} [${ ( 100 * cnt / tot ).toFixed( 4 ) } %] ${ ( ( Date.now() - stime ) / 1000 ).toFixed( 2 ) } secs` );
 }
 
 etime = ( ( Date.now() - stime ) / 1000 ).toFixed( 2 );
