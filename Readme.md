@@ -52,7 +52,7 @@ $ npm install geco [-g]
 > __require__:
 
 ```javascript
-var Geco  = require( 'geco' );
+const Geco  = require( 'geco' );
 ```
 
 ### Run Tests
