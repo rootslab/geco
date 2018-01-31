@@ -133,8 +133,8 @@ $ npm run bench
  * chosen from the first n items of the given set. Optionally, it
  * may uses also a bitmap, for generating combinations.
  *
- * NOTE: it consumes only n bytes in memory to generate all combinations,
- * with bitmap, it uses only n bits.
+ * NOTE: it consumes only n bytes in memory to generate all
+ * combinations, instead, with bitmap, it uses only n bits.
  */
 'gen' : function *( Number n, Number k, Array set [, Boolean bitmap ] ) : GeneratorFunction
 ```
