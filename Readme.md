@@ -29,6 +29,7 @@
 - __[Run Tests](#run-tests)__
 - __[Run Benchmarks](#run-benchmarks)__
 - __[Methods](#methods)__
+    - __[count](#gecocount)__
     - __[gen](#gecogen)__
     - __[getbuff](#gecogetbuff)__
     - __[getbmap](#gecogetbmap)__
@@ -120,10 +121,17 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
+| __[count](#gecocount)__ | `count the number of k-combinations` |
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
 | __[getbuff](#gecogetbuff)__ | `get a generic k-combination of n elements represented as a buffer` |
 | __[getbmap](#gecogetbmap)__ | `get a generic k-combination of n elements represented as a bitmap` |
 
+
+#### Geco.count
+> ##### get the total number of k-combinations from n elements
+```javascript
+'count' : function *( Number n, Number k ) : Number
+```
 
 #### Geco.gen
 > ##### get a k-combination of a given set, without replacement
