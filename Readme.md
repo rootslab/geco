@@ -126,8 +126,8 @@ $ npm run bench
 |:------------------------|:-----------------------------------------------------------------|
 | __[cnt](#gecocount)__   | `count the number of k-combinations` |
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
-| __[get](#gecoget)__     | `iterate on k-combinations of n elements, represented as buffers` |
-| __[getbm](#gecogetbm)__ | `iterate on k-combinations of n elements, represented as bitmaps` |
+| __[get](#gecoget)__     | `iterate on k-combinations of n elements, without replacement, represented as buffers` |
+| __[getbm](#gecogetbm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
 | __[mget](#gecomget)__   | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
 
 
