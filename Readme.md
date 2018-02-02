@@ -32,7 +32,7 @@
     - __[cnt](#gecocnt)__
     - __[gen](#gecogen)__
     - __[get](#gecoget)__
-    - __[getbm](#gecogetbm)__
+    - __[get_bm](#gecogetbm)__
     - __[mget](#gecomget)__
 - __[Events](#events)__
 - __[Examples](#examples)__
@@ -127,7 +127,7 @@ $ npm run bench
 | __[cnt](#gecocount)__   | `count the number of k-combinations` |
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
 | __[get](#gecoget)__     | `iterate on k-combinations of n elements, without replacement, represented as buffers` |
-| __[getbm](#gecogetbm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
+| __[get_bm](#gecogetbm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
 | __[mget](#gecomget)__   | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
 
 
@@ -161,7 +161,7 @@ $ npm run bench
 'get' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
-#### Geco.getbm
+#### Geco.get_bm
 > ##### iterate on all k-combinations of n elements, without replacement, represented as bitmaps  ([Toni](https://github.com/rootslab/toni))
 ```javascript
 /*
@@ -170,7 +170,7 @@ $ npm run bench
  *
  * NOTE: to check if the element at index i has been chosen use bitmap.chk( i ).
  */
-'getbm' : function ( Number n, Number k ) : GeneratorFunction
+'get_bm' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
 #### Geco.mget
