@@ -32,7 +32,7 @@
     - __[cnt](#gecocnt)__
     - __[gen](#gecogen)__
     - __[get](#gecoget)__
-    - __[get_bm](#gecogetbm)__
+    - __[get_bm](#gecoget_bm)__
     - __[mget](#gecomget)__
 - __[Events](#events)__
 - __[Examples](#examples)__
@@ -127,7 +127,7 @@ $ npm run bench
 | __[cnt](#gecocount)__   | `count the number of k-combinations` |
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
 | __[get](#gecoget)__     | `iterate on k-combinations of n elements, without replacement, represented as buffers` |
-| __[get_bm](#gecogetbm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
+| __[get_bm](#gecoget_bm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
 | __[mget](#gecomget)__   | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
 
 
