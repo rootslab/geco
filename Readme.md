@@ -132,13 +132,13 @@ $ npm run bench
 
 
 #### Geco.cnt
-> ##### get the total number of k-combinations from n elements
+> ##### get the total number of k-combinations from n elements, without replacement
 ```javascript
 'cnt' : function *( Number n, Number k ) : Number
 ```
 
 #### Geco.gen
-> ##### get a k-combination of a given set, without replacement
+> ##### iterate on all k-combination of a given set, without replacement
 ```javascript
 /*
  * get a generator for iterating on all combinations of k elements,
@@ -152,7 +152,7 @@ $ npm run bench
 ```
 
 #### Geco.get
-> ##### get a k-combination of n elements, as a buffer
+> ##### iterate on all k-combinations of n elements, without replacement, represented as buffers
 ```javascript
 /*
  * the iterator's value is a Buffer with k bytes set to 1.
@@ -162,7 +162,7 @@ $ npm run bench
 ```
 
 #### Geco.getbm
-> ##### get a k-combination of n elements, as a bitmap  ([Toni](https://github.com/rootslab/toni))
+> ##### iterate on all k-combinations of n elements, without replacement, represented as bitmaps  ([Toni](https://github.com/rootslab/toni))
 ```javascript
 /*
  * the iterator's value is a bitmap with k bits set to 1.
@@ -173,22 +173,11 @@ $ npm run bench
 'getbm' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
-#### Geco.get
-> ##### get a k-combination of n elements, as a buffer
-```javascript
-/*
- * the iterator's value is a Buffer with k bytes set to 1.
- * Every 1 (a byte) represents a chosen element for the current combination.
- */
-'get' : function ( Number n, Number k ) : GeneratorFunction
-```
-
 #### Geco.mget
-> ##### iterate on k-combinations from a mulitiset of v different types
+> ##### iterate on k-combinations of a mulitiset of v different types, with replacement
 ```javascript
 /*
- * iterate on k-combinations with repetitions/replacement, aka combinations
- * of a multiset.
+ * aka combinations of a multiset.
  *
  * the iterator's value is a Buffer representing the number of occurrences of
  * every type/value, according to the limit imposed by the repetition buffer.
