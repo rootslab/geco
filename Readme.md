@@ -28,18 +28,21 @@
 - __[Install](#install)__
 - __[Run Tests](#run-tests)__
 - __[Run Benchmarks](#run-benchmarks)__
-- __[Methods](#methods)__
-    - __[count](#gecocount)__
+- __[Properties](#properties)__
+    - __[cnt](#gecocnt)__
     - __[gen](#gecogen)__
-    - __[getbuff](#gecogetbuff)__
-    - __[getbmap](#gecogetbmap)__
+    - __[get](#gecoget)__
+    - __[getbm](#gecogetbm)__
+    - __[mget](#gecomget)__
 - __[Events](#events)__
 - __[Examples](#examples)__
   - __[Simple Example](#examples)__
   - __[Cards Example](#examples)__
   - __[Cartesian Product](#examples)__
   - __[52-Card Deck Example](#examples)__
-- __[MIT License](#mit-license)__
+  - __[Simple Multiset Example](#examples)__
+  - __[Multiset Example](#examples)__
+ - __[MIT License](#mit-license)__
 
 ------------------------------------------------------------------------------
 
@@ -121,16 +124,17 @@ $ npm run bench
 
 |            name         |                           description                            |
 |:------------------------|:-----------------------------------------------------------------|
-| __[count](#gecocount)__ | `count the number of k-combinations` |
+| __[cnt](#gecocount)__   | `count the number of k-combinations` |
 | __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
-| __[getbuff](#gecogetbuff)__ | `get a generic k-combination of n elements represented as a buffer` |
-| __[getbmap](#gecogetbmap)__ | `get a generic k-combination of n elements represented as a bitmap` |
+| __[get](#gecoget)__     | `iterate on k-combinations of n elements, represented as buffers` |
+| __[getbm](#gecogetbm)__ | `iterate on k-combinations of n elements, represented as bitmaps` |
+| __[mget](#gecomget)__   | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
 
 
-#### Geco.count
+#### Geco.cnt
 > ##### get the total number of k-combinations from n elements
 ```javascript
-'count' : function *( Number n, Number k ) : Number
+'cnt' : function *( Number n, Number k ) : Number
 ```
 
 #### Geco.gen
@@ -147,17 +151,17 @@ $ npm run bench
 'gen' : function *( Number n, Number k, Array set [, Boolean bitmap ] ) : GeneratorFunction
 ```
 
-#### Geco.getbuff
+#### Geco.get
 > ##### get a k-combination of n elements, as a buffer
 ```javascript
 /*
  * the iterator's value is a Buffer with k bytes set to 1.
  * Every 1 (a byte) represents a chosen element for the current combination.
  */
-'getbuff' : function ( Number n, Number k ) : GeneratorFunction
+'get' : function ( Number n, Number k ) : GeneratorFunction
 ```
 
-#### Geco.getbmap
+#### Geco.getbm
 > ##### get a k-combination of n elements, as a bitmap  ([Toni](https://github.com/rootslab/toni))
 ```javascript
 /*
@@ -166,8 +170,39 @@ $ npm run bench
  *
  * NOTE: to check if the element at index i has been chosen use bitmap.chk( i ).
  */
-'getbmap' : function ( Number n, Number k ) : GeneratorFunction
+'getbm' : function ( Number n, Number k ) : GeneratorFunction
 ```
+
+#### Geco.get
+> ##### get a k-combination of n elements, as a buffer
+```javascript
+/*
+ * the iterator's value is a Buffer with k bytes set to 1.
+ * Every 1 (a byte) represents a chosen element for the current combination.
+ */
+'get' : function ( Number n, Number k ) : GeneratorFunction
+```
+
+#### Geco.mget
+> ##### iterate on k-combinations from a mulitiset of v different types
+```javascript
+/*
+ * iterate on k-combinations with repetitions/replacement, aka combinations
+ * of a multiset.
+ *
+ * the iterator's value is a Buffer representing the number of occurrences of
+ * every type/value, according to the limit imposed by the repetition buffer.
+ *
+ * NOTE: the repetitions buffer should contain the nummber of max allowable
+ * repetitions for every type/value. If the max repetitions for a chosen type
+ * are > 256 you should use 2 byte per type (16 bits numbers), in the same
+ * manner if repetitions > 65536 you should use 4 bytes per type (32 bits).
+ * The buffer returned by the iterator should be read coherently to the number
+ * of bytes used for every type in the repetition buffer (1,2 or 4 bytes).
+ */
+'mget' : function ( Number k, Number v, Buffer repetitions ) : GeneratorFunction
+```
+
 
 ### Examples
 
@@ -175,6 +210,8 @@ $ npm run bench
  > - __[Cards Example](example/cards-example.js)__
  > - __[Cartesian Product](example/cartesian-product-example.js)__
  > - __[52-Card Deck Example](example/deck-example.js)__
+ > - __[Simple Multiset Example](example/multi-simple-example.js)__
+ > - __[Multiset Example](example/multi-example.js)__
 
 > See __[examples](example/)__.
 

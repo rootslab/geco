@@ -22,7 +22,7 @@ let log = console.log
     , cnt = 0
     , board = null
     // get total number of combinations
-    , tot = Geco.count( dlen, cards)
+    , tot = Geco.cnt( dlen, cards)
     , etime = 0
     , stime = Date.now()
     ;
