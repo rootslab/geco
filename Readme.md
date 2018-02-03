@@ -134,7 +134,7 @@ $ npm run bench
 #### Geco.cnt
 > ##### get the total number of k-combinations from n elements, without replacement
 ```javascript
-'cnt' : function *( Number n, Number k ) : Number
+'cnt' : function ( Number n, Number k ) : Number
 ```
 
 #### Geco.gen
