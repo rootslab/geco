@@ -17,7 +17,8 @@
 [![NPM GRAPH](https://nodei.co/npm/geco.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/geco/)
 
 > __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for 
-> __k-combinations__ chosen from a given set S of __n__ elements.
+> __k-combinations__ chosen from a given set S of __n__ elements, with and
+> without __replacement__.
 
 > It is __extremely memory efficient__, it generates all the k-combinations in
 > a set of __n elements__, using a __single sequence of n bits__, only __1 bit__
@@ -25,7 +26,7 @@
 
 > It is also able to generate all the __k-combinations__ of a given __multiset__,
 > aka __compositions with restricted parts__, of which, __combinations with repetition__
-> are the general case (without limits on possible repetitions). 
+> are the general case (without limits on possible repetitions).
 
 
 > __NOTE__: It generates combinations in __[Colexicographic Order](https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order)__.
