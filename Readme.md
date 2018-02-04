@@ -177,10 +177,14 @@ $ npm run bench
 > ##### iterate on k-combinations of a mulitiset of v different types, with replacement
 ```javascript
 /*
- * aka combinations of a multiset.
+ * aka compositions with restricted parts, repeated elements are allowed within
+ * certain limits.
  *
- * the iterator's value is a Buffer representing the number of occurrences of
- * every type/value, according to the limit imposed by the repetition buffer.
+ * NOTE: when all specified repetitions are (>)= v, it simply generates all the
+ * combinations with repetition. ( n + r − 1 )! / r!( n − 1 )!
+ *
+ * the iterator's value is a Buffer representing the number of elements chosen
+ * for every type/value, according to the limit imposed by the repetition buffer.
  *
  * NOTE: the repetitions buffer should contain the nummber of max allowable
  * repetitions for every type/value. If the max repetitions for a chosen type
@@ -189,7 +193,7 @@ $ npm run bench
  * The buffer returned by the iterator should be read coherently to the number
  * of bytes used for every type in the repetition buffer (1,2 or 4 bytes).
  */
-'mget' : function ( Number k, Number v, Buffer repetitions ) : GeneratorFunction
+'mget' : function ( Number k, Number v, Buffer | Number repetitions ) : GeneratorFunction
 ```
 
 
