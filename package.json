@@ -11,7 +11,11 @@
   "keywords": [
     "geco",
     "combinations",
+    "combinations with repetition",
     "k-combinations",
+    "multiset",
+    "compositions"
+    "compositions with restricted parts"
     "colex",
     "colexicographic order",
     "CAT",
