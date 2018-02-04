@@ -1,6 +1,6 @@
 /*
- * Generate all possible poker boards of 7 cards from a 52-card deck, 4 suits.
- * Then, generate all the (multiset) combinations of 7 cards chosen from 13
+ * Generate all different poker boards of 7 cards from a 52-card deck, 4 suits.
+ * Then, generate all the (multiset) combinations of 7 elements chosen from 13
  * different values/types, with max (restricted) repetitions set to 4, for
  * every value/type.
  */

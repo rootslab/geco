@@ -20,7 +20,7 @@
 > __k-combinations__ chosen from a given set S of __n__ elements, with and
 > without __replacement__.
 
-> It is __extremely memory efficient__, it generates all the k-combinations in
+> It is __extremely memory efficient__ and __very fast__, it generates all the k-combinations in
 > a set of __n elements__, using a __single sequence of n bits__, only __1 bit__
 > per element.
 
