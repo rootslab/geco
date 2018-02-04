@@ -1,6 +1,6 @@
 {
   "name": "geco",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Geco, a (Constant Amortized Time) recursive generator* for k-combinations, chosen from a given set S of n elements, with and without replacement.",
   "homepage": "https://github.com/rootslab/geco",
   "private": false,
@@ -20,7 +20,8 @@
     "colexicographic order",
     "CAT",
     "combinatorics",
-    "generators"
+    "generators",
+    "poker"
   ],
   "author": {
     "name": "Guglielmo Ferri",
