@@ -23,9 +23,9 @@ let log = console.log
 
 log( `\n- repetitions are represented by a single integer: ${r}` );
 log( `- ${blen} byte(s) per element, ${v} different types` );
-log( `\n- generating all multiset combinations of:` );
+log( '\n- generating all multiset combinations of:' );
 log( `  - ${k} elements chosen from ${v} different types` );
-log( `  - for every type, repetitions are (at max):`, arep );
+log( '  - for every type, repetitions are (at max):', arep );
 log();
 
 for ( buff of iter ) {
