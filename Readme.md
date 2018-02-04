@@ -16,9 +16,18 @@
 
 [![NPM GRAPH](https://nodei.co/npm/geco.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/geco/)
 
-> __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for __k-combinations__ chosen from a given set S of __n__ elements.
+> __Geco__, a __CAT__ (Constant Amortized Time) __recursive generator*__ for 
+> __k-combinations__ chosen from a given set S of __n__ elements, with and
+> without __replacement__.
 
-> It is __extremely memory efficient__, it generates all the k-combinations in a set of __n elements__, using a __single sequence of n bits__, only __1 bit__ per element.
+> It is __extremely memory efficient__, it generates all the k-combinations in
+> a set of __n elements__, using a __single sequence of n bits__, only __1 bit__
+> per element.
+
+> It is also able to generate all the __k-combinations__ of a given __multiset__,
+> aka __compositions with restricted parts__, of which, __combinations with repetition__
+> are the general case (without limits on possible repetitions).
+
 
 > __NOTE__: It generates combinations in __[Colexicographic Order](https://en.wikipedia.org/wiki/Lexicographical_order#Colexicographic_order)__.
 
@@ -42,6 +51,8 @@
   - __[52-Card Deck Example](#examples)__
   - __[Simple Multiset Example](#examples)__
   - __[Multiset Example](#examples)__
+  - __[Multiset Fixed Repetitions Example](#examples)__
+  - __[7-card Poker Boards Example](#examples)__
  - __[MIT License](#mit-license)__
 
 ------------------------------------------------------------------------------
@@ -177,10 +188,14 @@ $ npm run bench
 > ##### iterate on k-combinations of a mulitiset of v different types, with replacement
 ```javascript
 /*
- * aka combinations of a multiset.
+ * aka compositions with restricted parts, repeated elements are allowed within
+ * certain limits.
  *
- * the iterator's value is a Buffer representing the number of occurrences of
- * every type/value, according to the limit imposed by the repetition buffer.
+ * NOTE: when all specified repetitions are (>)= v, it simply generates all the
+ * combinations with repetition. ( n + r − 1 )! / r!( n − 1 )!
+ *
+ * the iterator's value is a Buffer representing the number of elements chosen
+ * for every type/value, according to the limit imposed by the repetition buffer.
  *
  * NOTE: the repetitions buffer should contain the nummber of max allowable
  * repetitions for every type/value. If the max repetitions for a chosen type
@@ -189,7 +204,7 @@ $ npm run bench
  * The buffer returned by the iterator should be read coherently to the number
  * of bytes used for every type in the repetition buffer (1,2 or 4 bytes).
  */
-'mget' : function ( Number k, Number v, Buffer repetitions ) : GeneratorFunction
+'mget' : function ( Number k, Number v, Buffer | Number repetitions ) : GeneratorFunction
 ```
 
 
@@ -201,6 +216,8 @@ $ npm run bench
  > - __[52-Card Deck Example](example/deck-example.js)__
  > - __[Simple Multiset Example](example/multi-simple-example.js)__
  > - __[Multiset Example](example/multi-example.js)__
+ > - __[Multiset Fixed Repetitions Example](example/multi-fixed-integer-example.js)__
+ > - __[7-card Poker Boards Example](example/multi-cards-example.js)__
 
 > See __[examples](example/)__.
 
