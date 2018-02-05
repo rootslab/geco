@@ -28,7 +28,7 @@ for ( let buff of iter ) {
         let el = buff[ j ];
         while ( el-- ) board.push( cards[ j ] );
     }
-    log( `  ${++cnt}:`, buff, board );
+    log( `  ${++cnt}:`, buff, board, board.join( '' ) );
 }
 
 // it's the same to count combinations without repetitions

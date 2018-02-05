@@ -25,5 +25,5 @@ for ( let buff of iter ) {
             --el;
         }
     }
-    log( `  ${++cnt}:`, buff, board );
+    log( `  ${++cnt}:`, buff, board, board.join( '' ) );
 }
