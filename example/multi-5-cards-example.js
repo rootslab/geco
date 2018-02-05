@@ -26,10 +26,7 @@ for ( let buff of iter ) {
     let board = [];
     for ( let j = 0; j < buff.length; j++ ) {
         let el = buff[ j ];
-        while ( el ) {
-            board.push( cards[ j ] );
-            --el;
-        }
+        while ( el-- ) board.push( cards[ j ] );
     }
     log( `  ${++cnt}:`, buff, board );
 }

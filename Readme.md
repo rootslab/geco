@@ -134,13 +134,13 @@ $ npm run bench
 
 > Arguments between [ ] are optional.
 
-|            name         |                           description                            |
-|:------------------------|:-----------------------------------------------------------------|
-| __[cnt](#gecocount)__   | `count the number of k-combinations` |
-| __[gen](#gecogen)__     | `get a generator to produce combinations of k elements from a given set, without replacement`|
-| __[get](#gecoget)__     | `iterate on k-combinations of n elements, without replacement, represented as buffers` |
+|             name          |                             description                                |
+|:--------------------------|:-----------------------------------------------------------------------|
+| __[cnt](#gecocount)__     | `count the number of k-combinations of n elements, without repetition` |
+| __[gen](#gecogen)__       | `get a generator to produce combinations of k elements from a given set, without repetition`|
+| __[get](#gecoget)__       | `iterate on k-combinations of n elements, without replacement, represented as buffers` |
 | __[get_bm](#gecoget_bm)__ | `iterate on k-combinations of n elements, without replacement, represented as bitmaps` |
-| __[mget](#gecomget)__   | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
+| __[mget](#gecomget)__     | `iterate on k-combinations from a mulitiset of v different types, represented as buffers` |
 
 
 #### Geco.cnt
