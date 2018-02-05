@@ -53,6 +53,7 @@
   - __[Multiset Example](#examples)__
   - __[Multiset Fixed Repetitions Example](#examples)__
   - __[7-card Poker Boards Example](#examples)__
+  - __[5 different cards Poker Boards Example](#examples)__
  - __[MIT License](#mit-license)__
 
 ------------------------------------------------------------------------------
@@ -217,7 +218,8 @@ $ npm run bench
  > - __[Simple Multiset Example](example/multi-simple-example.js)__
  > - __[Multiset Example](example/multi-example.js)__
  > - __[Multiset Fixed Repetitions Example](example/multi-fixed-integer-example.js)__
- > - __[7-card Poker Boards Example](example/multi-cards-example.js)__
+ > - __[7-card Poker Boards Example](example/multi-7-cards-example.js)__
+ > - __[5 different cards Poker Boards Example](example/multi-5-cards-example.js)__
 
 > See __[examples](example/)__.
 
