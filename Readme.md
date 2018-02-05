@@ -201,7 +201,7 @@ $ npm run bench
  * NOTE: the repetitions buffer should contain the nummber of max allowable
  * repetitions for every type/value. If the max repetitions for a chosen type
  * are > 256 you should use 2 byte per type (16 bits numbers), in the same
- * manner if repetitions > 65536 you should use 4 bytes per type (32 bits).
+ * manner, if repetitions > 65536 you should use 4 bytes per type (32 bits).
  * The buffer returned by the iterator should be read coherently to the number
  * of bytes used for every type in the repetition buffer (1,2 or 4 bytes).
  */
