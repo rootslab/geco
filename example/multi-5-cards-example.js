@@ -23,11 +23,14 @@ let log = console.log
 
 // gen boards with cards
 for ( let buff of iter ) {
-    let board = [];
-    for ( let j = 0; j < buff.length; j++ ) {
-        let el = buff[ j ];
-        while ( el-- ) board.push( cards[ j ] );
-    }
+    let board = []
+        , blen = buff.length
+        , el = buff[ 0 ]
+        , j = 0
+        ;
+    for ( ; j < blen; el = buff[ ++j ] )
+        while ( el-- ) board.push( cards[ j ] )
+        ;
     log( `  ${++cnt}:`, buff, board, board.join( '' ) );
 }
 
